@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-body antialiased;
+  background-color: #F5EFDF;
+  color: #2B2620;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark body {
+  background-color: #18140F;
+  color: #F5EFDF;
+}
+
+::selection {
+  background: #B0813C;
+  color: #18140F;
+}
+
+/* Faint paper grain, present on every surface to suggest ledger paper */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+}
+
+html.dark .grain-overlay {
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+
+/* Custom scrollbar, gold-toned */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #B0813C;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Ledger rule — a hairline divider with a small diamond mark, standing in for
+   the ruled lines of an account book rather than a decorative icon strip. */
+.ledger-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.ledger-rule::before,
+.ledger-rule::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  max-width: 6rem;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+/* Utility label style used in place of a mono/code typeface — tracked-out
+   small caps in the body face, evoking a stamped ledger heading. */
+.label-eyebrow {
+  @apply font-body text-base font-semibold uppercase tracking-[0.15em];
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #B0813C;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
