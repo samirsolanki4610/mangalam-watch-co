@@ -21,7 +21,7 @@ export default function Footer() {
             </h3>
 
               <ul className="mt-6 space-y-4 text-sm text-cream/75">
-                <li>• Watch Sales</li>
+                <li>• op Sales</li>
                 <li>• Repair Services</li>
                 <li>• Battery Replacement</li>
                 <li>• Strap & Glass Replacement</li>
