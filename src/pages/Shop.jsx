@@ -73,12 +73,12 @@ export default function Shop() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search watches..."
-              className="w-full rounded-md border border-ink/15 bg-cream-card px-5 py-2.5 font-body text-sm text-ink placeholder:text-ink/40 focus:border-gold dark:border-cream/15 dark:bg-ink-card dark:text-cream sm:w-64"
+              className="w-full sm:w-64 rounded-md border border-ink/15 dark:border-cream/15 bg-cream-card dark:bg-ink-card px-5 py-2.5 font-body text-sm text-ink dark:text-cream placeholder:text-ink/40 dark:placeholder:text-cream/60 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30 transition-colors duration-200"
             />
           </div>
-        </div>
+         </div>
 
-        <p className="mt-6 label-eyebrow text-ink/50 dark:text-cream/50">
+        <p className="mt-6 label-eyebrow text-ink/50 dark:text-cream/70">
           {filtered.length} watch{filtered.length !== 1 ? 'es' : ''} found
         </p>
 

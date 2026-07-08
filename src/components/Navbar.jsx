@@ -41,7 +41,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
-            src="/logo.png"
+            src="/mangalam-watch-co/logo.png"
             alt="Mangalam Watch Co. crest"
             className="h-10 w-10 rounded-full border border-gold/40 object-cover sm:h-11 sm:w-11"
           />

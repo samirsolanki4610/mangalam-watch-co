@@ -192,7 +192,7 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-md bg-maroon py-3 font-body text-sm font-medium tracking-wide text-cream shadow-stamp transition-colors duration-200 hover:bg-maroon-deep"
+                  className="w-full rounded-md border border-cream/20 bg-transparent py-3 font-body text-sm font-medium tracking-wide text-cream transition-all duration-300 hover:bg-gold hover:border-gold hover:text-ink"
                 >
                   Send Message
                 </button>

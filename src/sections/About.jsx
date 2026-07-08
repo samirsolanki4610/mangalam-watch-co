@@ -1,4 +1,5 @@
 import Reveal from '../components/Reveal.jsx'
+import StoryImage from "../assets/images/Story.png";
 
 export default function About() {
   return (
@@ -11,11 +12,11 @@ export default function About() {
         <Reveal>
           <div className="relative mx-auto max-w-sm">
             <img
-              src="https://picsum.photos/seed/mangalam-shopfront/700/800"
-              alt="Inside the Mangalam Watch Co. showroom"
+              src={StoryImage}
+              alt="Mangalam Watch Shop"
               className="w-full rounded-lg object-cover shadow-ledger"
             />
-            <div className="absolute -bottom-6 -right-6 rounded-lg bg-maroon px-6 py-4 text-center shadow-stamp">
+            <div className="absolute -bottom-6 -right-6 rounded-lg bg-gold px-6 py-4 text-center shadow-stamp">
               <p className="font-display text-2xl font-bold text-cream">30+</p>
               <p className="label-eyebrow text-cream/85">Years Trusted</p>
             </div>
