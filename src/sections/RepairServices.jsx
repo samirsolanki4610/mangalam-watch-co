@@ -19,9 +19,6 @@ export default function RepairServices() {
         <span className="h-1.5 w-1.5 rotate-45 shrink-0 bg-current" />
       </div>
 
-      {/* Faint watch-bezel watermark — the section's quiet signature, not a colour block */}
-      <DialMark className="pointer-events-none absolute -right-24 -top-24 h-[26rem] w-[26rem] text-ink/[0.035] dark:text-cream/[0.04] sm:-right-16 sm:-top-16" />
-
       <div className="relative mx-auto max-w-6xl px-6 sm:px-8">
         <Reveal className="max-w-2xl">
           <p className="label-eyebrow !text-3xl text-maroon dark:text-gold-light">Repair Counter</p>
