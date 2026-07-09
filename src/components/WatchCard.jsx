@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { getWarranty } from '../utils/warranty.js'
 
 export default function WatchCard({ watch, index = 0 }) {
-  const warranty = getWarranty(watch.price)
-
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 14 }}
@@ -31,13 +29,9 @@ export default function WatchCard({ watch, index = 0 }) {
           <h3 className="font-body text-base font-semibold text-ink dark:text-cream sm:text-lg">
             {watch.name}
           </h3>
-          <div className="mt-2 flex items-end justify-between gap-2">
-            <span className="font-display text-lg sm:text-xl font-medium text-maroon dark:text-gold-light">
+          <div className="mt-2">
+            <span className="block font-display text-lg font-medium text-maroon dark:text-gold-light">
               ₹{watch.price.toLocaleString('en-IN')}
-            </span>
-
-            <span className="shrink-0 text-right label-eyebrow text-ink/45 dark:text-cream/45">
-              {warranty}
             </span>
           </div>
           <span className="mt-4 inline-flex w-full items-center justify-center rounded-md border border-gold/60 py-2 font-body text-sm font-medium tracking-wide text-gold-dark transition-colors duration-200 group-hover:bg-gold group-hover:text-ink-deep dark:text-gold-light">
