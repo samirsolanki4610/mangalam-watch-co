@@ -28,7 +28,7 @@ export default function WatchCard({ watch, index = 0 }) {
         </div>
 
         <div className="p-4 sm:p-5">
-          <h3 className="font-display text-base font-semibold text-ink dark:text-cream sm:text-lg">
+          <h3 className="font-body text-base font-semibold text-ink dark:text-cream sm:text-lg">
             {watch.name}
           </h3>
           <div className="mt-2 flex items-center justify-between">
