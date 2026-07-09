@@ -31,11 +31,12 @@ export default function WatchCard({ watch, index = 0 }) {
           <h3 className="font-body text-base font-semibold text-ink dark:text-cream sm:text-lg">
             {watch.name}
           </h3>
-          <div className="mt-2 flex items-center justify-between">
-            <span className="font-display text-lg font-medium text-maroon dark:text-gold-light">
+          <div className="mt-2 flex items-end justify-between gap-2">
+            <span className="font-display text-lg sm:text-xl font-medium text-maroon dark:text-gold-light">
               ₹{watch.price.toLocaleString('en-IN')}
             </span>
-            <span className="label-eyebrow text-ink/45 dark:text-cream/45">
+
+            <span className="shrink-0 text-right label-eyebrow text-ink/45 dark:text-cream/45">
               {warranty}
             </span>
           </div>
