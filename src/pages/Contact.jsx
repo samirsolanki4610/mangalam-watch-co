@@ -4,7 +4,7 @@ import { getCallLink, getMailLink, getWhatsAppLink, SHOP_EMAIL, SHOP_PHONE_DISPL
 
 const INSTAGRAM_HANDLE = 'mangalam.watch.co'
 const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`
-const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Bapunagar,+Ahmedabad,+Gujarat'
+const MAPS_URL = 'https://maps.app.goo.gl/eyjaJfcwgB2yGP3N9'
 
 function Icon({ path, className = 'h-5 w-5' }) {
   return (
@@ -106,15 +106,23 @@ export default function Contact() {
             </div>
 
             <div className="overflow-hidden rounded-lg border border-gold/25 shadow-card">
-              <iframe
-                title="Mangalam Watch Co. on Google Maps"
-                src="https://www.google.com/maps?q=Bapunagar,+Ahmedabad,+Gujarat&output=embed"
-                width="100%"
-                height="240"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="block overflow-hidden rounded-lg border border-gold/25 shadow-card"
+              >
+                <iframe
+                  title="Mangalam Watch Co."
+                  src="https://www.google.com/maps?q=Bapunagar,+Ahmedabad,+Gujarat&output=embed"
+                  width="100%"
+                  height="240"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  className="pointer-events-none"
+                />
+              </a>
             </div>
           </motion.div>
 
